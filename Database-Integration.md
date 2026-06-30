@@ -155,3 +155,50 @@ version is not possible, as it can be slow. <br>
 
 <img width="1521" height="881" alt="image" src="https://github.com/user-attachments/assets/04697fb7-cd5f-4552-911f-07416a984ef8" />
 
+<br>
+
+**| Task 2: Creating and Using Views** <br>
+**Goal:** Create reusable views that simplify complex queries.<br>
+**Steps:** <br>
+39. Create a view vw_student_enrollment_summary showing each student's full name, department,
+number of courses enrolled in, and GPA (average grade converted: A=4, B=3, C=2, D=1, F=0).<br>
+40. Create a view vw_course_stats showing course_name, course_code, total_enrollments, and avg_gpa
+for each course.<br>
+41. Query vw_student_enrollment_summary to find students with GPA above 3.0.<br>
+42. Attempt to UPDATE a row through vw_student_enrollment_summary and note what happens.
+Research and document in your comments why multi-table views are generally not updatable.<br>
+43. DROP both views and recreate vw_student_enrollment_summary as a view WITH CHECK OPTION
+(use a single-table subset view for this step).<br>
+**Hint:** <br>
+. CASE WHEN grade='A' THEN 4 WHEN grade='B' THEN 3 ... END converts letter grades to GPA points. <br>
+. WITH CHECK OPTION prevents INSERT/UPDATE through the view if the row would not be visible through
+the view's WHERE clause.<br>
+**Expected Outcome:** SELECT * FROM vw_course_stats returns 5 rows - one per course in the sample data.<br>
+
+<img width="1525" height="873" alt="image" src="https://github.com/user-attachments/assets/d4655d61-8289-4845-91c5-43585d44801e" />
+
+<br>
+
+**| Task 3: Stored Procedures and Transactions** <br>
+**Goal:** Encapsulate business logic in procedures and use transactions to maintain integrity.<br>
+**Steps:** <br>
+44. Write a stored procedure sp_enroll_student (MySQL) or function fn_enroll_student (PostgreSQL) that
+accepts student_id, course_id, and enrollment_date, checks for duplicate enrollment, and inserts the
+record.<br>
+45. Write a procedure sp_transfer_student that moves a student from one department to another. Wrap
+the UPDATE and a log-insert into a new table department_transfer_log inside a single transaction.
+ROLLBACK if either statement fails.<br>
+46. Test the transaction by manually introducing an error (e.g., invalid foreign key) and verify that the first
+UPDATE is also rolled back.<br>
+47. Use SAVEPOINT to create a mid-transaction checkpoint: insert two enrollment records; set a
+SAVEPOINT after the first; deliberately fail the second; ROLLBACK TO SAVEPOINT and verify only
+the first record was saved.<br>
+**Hint:** <br>
+. In MySQL use DELIMITER $$ ... DELIMITER ; to define stored procedures in a .sql file.<br>
+. In PostgreSQL use CREATE OR REPLACE FUNCTION ... LANGUAGE plpgsql.<br>
+**Expected Outcome:** sp_enroll_student raises a descriptive error on duplicate enrollment. The SAVEPOINT
+test shows the first insert persisting after partial rollback. <br>
+
+<img width="1485" height="197" alt="image" src="https://github.com/user-attachments/assets/bf914895-bcaf-447c-aeb6-512497d385c5" />
+
+
