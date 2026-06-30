@@ -57,3 +57,23 @@ verify.<br>
 **Expected Outcome:** Each ALTER runs without error. Final schema matches the original plus max_seats and
 the renamed head_of_dept column.
 <img width="1920" height="5400" alt="Screenshot 2026-06-30 182139-imageonline co-merged" src="https://github.com/user-attachments/assets/1f17e9cd-e756-442c-bbd5-49ec5273ecc0" />
+<br>
+**Writing SQL Queries - DML, Joins & Aggregations**
+<br>
+**| Task 1: Insert, Update and Delete Data** <br>
+**Goal:** Practise all DML operations ensuring data consistency.<br>
+**Steps:** <br>
+15. Insert the sample data from the Common Schema section into all five tables (use the provided
+INSERT statements).<br>
+16. Insert two additional students of your own choosing into the students table.<br>
+17. Update the grade of student_id = 5 for course_id = 1 from 'C' to 'B'.<br>
+18. Delete enrollments where grade IS NULL (students who never received a grade).<br>
+19. Verify row counts using SELECT COUNT(*) after each operation.<br>
+**Hint:** <br>
+. Run SELECT * FROM enrollments WHERE grade IS NULL before deleting to preview the rows that will be
+removed. <br>
+**Expected Outcome:** students table has 10 rows. enrollments has only rows with non-NULL grades after the
+DELETE.<br>
+
+<img width="1653" height="978" alt="image" src="https://github.com/user-attachments/assets/2d1dfa0a-7767-4853-9f6b-df84b9e4fa2d" />
+<img width="1648" height="939" alt="image" src="https://github.com/user-attachments/assets/2ac732ea-02e8-47bb-8917-425d2eb41642" />
