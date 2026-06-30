@@ -56,4 +56,4 @@ verify.<br>
 . Use INFORMATION_SCHEMA.COLUMNS to confirm changes.<br>
 **Expected Outcome:** Each ALTER runs without error. Final schema matches the original plus max_seats and
 the renamed head_of_dept column.
-<img width="569" height="1600" alt="WhatsApp Image 2026-06-30 at 6 26 06 PM" src="https://github.com/user-attachments/assets/f06bd1b3-d431-4ae1-b34e-4f5f2e5eee0a" />
+<img width="1920" height="5400" alt="Screenshot 2026-06-30 182139-imageonline co-merged" src="https://github.com/user-attachments/assets/1f17e9cd-e756-442c-bbd5-49ec5273ecc0" />
