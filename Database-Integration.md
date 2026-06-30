@@ -77,3 +77,21 @@ DELETE.<br>
 
 <img width="1653" height="978" alt="image" src="https://github.com/user-attachments/assets/2d1dfa0a-7767-4853-9f6b-df84b9e4fa2d" />
 <img width="1648" height="939" alt="image" src="https://github.com/user-attachments/assets/2ac732ea-02e8-47bb-8917-425d2eb41642" />
+<br>
+
+**Task 2: Single-Table Queries and Filtering** <br>
+**Goal**: Build confidence with SELECT, WHERE, ORDER BY, and LIKE.<br>
+**Steps:** <br>
+20. Retrieve all students enrolled in 2022, ordered by last_name alphabetically.<br>
+21. Find all courses with more than 3 credits, sorted by credits descending.<br>
+22. List all professors whose salary is between 80,000 and 95,000.<br>
+23. Find all students whose email ends with '@college.edu' using the LIKE operator.<br>
+24. Count the total number of students per enrollment_year.<br>
+**Hint:** <br>
+. BETWEEN is inclusive on both ends.<br>
+. The % wildcard matches any sequence of characters in LIKE patterns.<br>
+**Expected Outcome:** Query 5 returns 3 rows - one per distinct enrollment_year in the sample data.
+<br>
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ed5b4f9a-e5aa-4d4f-a48d-1df6b8a8267a" />
+
+
