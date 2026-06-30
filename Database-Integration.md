@@ -115,4 +115,21 @@ those with 0 students.<br>
 
 <img width="1654" height="689" alt="image" src="https://github.com/user-attachments/assets/c0af63ea-e84f-4edd-9447-a64cd84b8843" />
 <img width="1649" height="772" alt="image" src="https://github.com/user-attachments/assets/b2798756-9fba-42c2-a5e9-7c07137f392a" />
+<br>
 
+**Task 4: Aggregations and Grouping** <br>
+**Goal:** Use aggregate functions to generate summary reports.<br>
+**Steps:** <br>
+30. Calculate the total number of enrollments per course. Display course_name and enrollment_count.<br>
+31. Find the average salary of professors per department. Round to 2 decimal places.<br>
+32. Find all departments where the total budget exceeds 600,000.<br>
+33. Show the grade distribution for course CS101: count of each grade (A, B, C, D, F).<br>
+34. Using HAVING, list departments where more than 2 students are enrolled across all courses in that
+department.<br>
+**Hint:** <br>
+. Use GROUP BY with HAVING (not WHERE) to filter on aggregated results.<br>
+. ROUND(AVG(salary), 2) works in both PostgreSQL and MySQL.<br>
+**Expected Outcome:** Query 2 returns 4 rows - one per department, with average salary rounded to 2 decimal
+places.<br>
+
+<img width="1651" height="574" alt="image" src="https://github.com/user-attachments/assets/0ed074a1-1caa-458e-87a1-ac147ac0c560" />
