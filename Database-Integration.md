@@ -93,5 +93,26 @@ DELETE.<br>
 **Expected Outcome:** Query 5 returns 3 rows - one per distinct enrollment_year in the sample data.
 <br>
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ed5b4f9a-e5aa-4d4f-a48d-1df6b8a8267a" />
+<br>
+**| Task 3: Multi-Table Joins**
+**Goal:** Write JOIN queries spanning 2-4 tables to answer real business questions.<br>
+**Steps:** <br>
+25. List each student's full name (first_name +''+ last_name) alongside the name of their department.
+(JOIN students and departments.)<br>
+26. Show each enrollment along with the student's name and the course name. (3-table JOIN:
+enrollments, students, courses.<br>
+27. Find all students who are NOT enrolled in any course using a LEFT JOIN and WHERE ... IS NULL
+pattern.<br>
+28. Display every course along with the number of students enrolled in it. Courses with zero enrolments
+must still appear. (LEFT JOIN courses with enrollments, GROUP BY course.)<br>
+29. List each department along with its professors and their salaries. Include departments that have no
+professors yet.<br>
+**Hint:** <br>
+. LEFT JOIN keeps all rows from the left table even if no match exists on the right - essential for 'find
+missing relationships' queries.<br>
+**Expected Outcome:** Query 3 returns students with no enrollments. Query 4 shows all 5 courses, including
+those with 0 students.<br>
 
+<img width="1654" height="689" alt="image" src="https://github.com/user-attachments/assets/c0af63ea-e84f-4edd-9447-a64cd84b8843" />
+<img width="1649" height="772" alt="image" src="https://github.com/user-attachments/assets/b2798756-9fba-42c2-a5e9-7c07137f392a" />
 
