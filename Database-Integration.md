@@ -135,6 +135,8 @@ places.<br>
 <img width="1651" height="574" alt="image" src="https://github.com/user-attachments/assets/0ed074a1-1caa-458e-87a1-ac147ac0c560" />
 <br>
 
+**Advanced SQL - Subqueries, Views & Transactions** <br>
+
 **| Task 1: Subqueries** <br>
 **Goal**: Use subqueries to answer questions that require multi-step logic.<br>
 **Steps:** <br>
