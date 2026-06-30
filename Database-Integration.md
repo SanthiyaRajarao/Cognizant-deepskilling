@@ -133,3 +133,23 @@ department.<br>
 places.<br>
 
 <img width="1651" height="574" alt="image" src="https://github.com/user-attachments/assets/0ed074a1-1caa-458e-87a1-ac147ac0c560" />
+<br>
+
+**| Task 1: Subqueries** <br>
+**Goal**: Use subqueries to answer questions that require multi-step logic.<br>
+**Steps:** <br>
+35. Find all students who are enrolled in more courses than the average number of enrollments per
+student. (Use a non-correlated subquery to calculate the average.)<br>
+36. List courses in which all enrolled students have received a grade of 'A'. (Correlated subquery or NOT
+EXISTS.)<br>
+37. Find the professor with the highest salary in each department using a correlated subquery.<br>
+38. Using a subquery in the FROM clause (derived table), calculate the per-department average salary
+and then filter to departments where that average exceeds 85,000.<br>
+**Hint:** <br>
+. A correlated subquery re-executes for every row of the outer query - use it only when a non-correlated
+version is not possible, as it can be slow. <br>
+. Derived tables in the FROM clause must always have an alias.<br>
+**Expected Outcome:** Query 1 should return students enrolled in 3 or more courses based on sample data.<br>
+
+<img width="1521" height="881" alt="image" src="https://github.com/user-attachments/assets/04697fb7-cd5f-4552-911f-07416a984ef8" />
+
