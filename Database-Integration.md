@@ -224,26 +224,24 @@ runs it and shows real timings. <br>
 <img width="1662" height="883" alt="image" src="https://github.com/user-attachments/assets/51410b1f-a668-4ca5-ae09-303e7683f5fb" />
 
 <br>
-| Task 3: Identify and Fix the N+1 Problem
-Goal: Recognise and resolve the most common ORM performance anti-pattern.
-Steps:
 
-Page | For Digital Nurture 5.0 Participants Only
-
-Digital Nurture 5.0 | Module 3: Database Integration | Hands-On Exercise Book
-
+**| Task 3: Identify and Fix the N+1 Problem** <br>
+**Goal:** Recognise and resolve the most common ORM performance anti-pattern.<br>
+**Steps:** <br>
 56. Simulate the N+1 problem in Python: fetch all enrollments with SELECT * FROM enrollments, then
 loop through each row and issue a separate SELECT to fetch the student's name. Count the total
-queries executed.
+queries executed.<br>
 57. Rewrite the script using a single JOIN query that retrieves all enrollment records with student names in
-one query.
+one query.<br>
 58. Compare the number of database round-trips between the two approaches and log the difference
-using Python's time module.
+using Python's time module.<br>
 59. Document in comments: in a real application with 10,000 enrollments, how many extra queries would
-the N+1 version issue?
-Hint:
-. N+1 means: 1 query to get N rows, then N additional queries to fetch related data - N+1 total instead of 1.
+the N+1 version issue?<br>
+**Hint:** <br>
+. N+1 means: 1 query to get N rows, then N additional queries to fetch related data - N+1 total instead of 1.<br>
 . This is most commonly introduced by ORM lazy loading. The fix is eager loading (JOIN or ORM
-select_related / joinedload).
-Expected Outcome: Script version 1 prints '13 queries executed'. Script version 2 prints '1 query executed'.
-Both return identical data.
+select_related / joinedload).<br>
+**Expected Outcome:** Script version 1 prints '13 queries executed'. Script version 2 prints '1 query executed'.
+Both return identical data. <br>
+<img width="1652" height="1031" alt="Screenshot 2026-07-01 145421" src="https://github.com/user-attachments/assets/a3b0030e-45d0-4489-a322-c258e6582742" />
+
