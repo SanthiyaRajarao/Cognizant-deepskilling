@@ -201,4 +201,25 @@ test shows the first insert persisting after partial rollback. <br>
 
 <img width="1485" height="197" alt="image" src="https://github.com/user-attachments/assets/bf914895-bcaf-447c-aeb6-512497d385c5" />
 
+<br>
+
+
+****Query Optimisation** - Indexes, EXPLAIN & the N+1 Problem**
+<br>
+**| Task 1:** Baseline Performance - No Indexes <br>
+**Goal:** Establish a baseline before any optimisation.<br>
+**Steps:** <br>
+48. Run EXPLAIN (PostgreSQL) or EXPLAIN FORMAT=JSON (MySQL) on the following query and save
+the output as a comment in your .sql file: SELECT s.first_name, s.last_name, c.course_name FROM
+enrollments e JOIN students s ON s.student_id = e.student_id JOIN courses c ON c.course_id =
+e.course_id WHERE s.enrollment_year = 2022; <br>
+49. Identify whether the query plan shows a Sequential Scan (Postgres) or Full Table Scan (MySQL) on
+any table. <br>
+50. Note the estimated cost (PostgreSQL) or rows examined (MySQL) in your comments.<br>
+**Hint:** <br>
+. EXPLAIN does not execute the query - it only shows the plan. EXPLAIN ANALYZE (PostgreSQL) actually
+runs it and shows real timings. <br>
+. A Seq Scan is not always bad for small tables - it becomes a problem as data grows.<br>
+**Expected Outcome:** Your comment block contains the EXPLAIN output and identifies at least one table scan.<br>
+<img width="1662" height="883" alt="image" src="https://github.com/user-attachments/assets/51410b1f-a668-4ca5-ae09-303e7683f5fb" />
 
