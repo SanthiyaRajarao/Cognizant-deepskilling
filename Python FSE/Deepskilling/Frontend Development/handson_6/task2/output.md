@@ -17,4 +17,5 @@
 <img width="1919" height="655" alt="image" src="https://github.com/user-attachments/assets/a1ec4b20-3f38-4afa-abb7-a7aa167473cd" />
 
 ## PROFILE PAGE :
-<img width="1919" height="1035" alt="image" src="https://github.com/user-attachments/assets/38afca53-2bed-4aa7-96dd-ab77ec52f855" />
+<img width="1919" height="707" alt="image" src="https://github.com/user-attachments/assets/67c31531-e871-49e3-8c89-b9a60f65931e" />
+
