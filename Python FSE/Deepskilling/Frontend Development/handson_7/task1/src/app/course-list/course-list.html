@@ -1,0 +1,24 @@
+<h2>Available Courses</h2>
+
+<input
+type="text"
+placeholder="Search Courses"
+[(ngModel)]="searchTerm">
+
+<div class="course-container">
+
+<app-course-card
+
+*ngFor="let course of filteredCourses"
+
+[name]="course.name"
+
+[code]="course.code"
+
+[credits]="course.credits"
+
+[grade]="course.grade">
+
+</app-course-card>
+
+</div>
