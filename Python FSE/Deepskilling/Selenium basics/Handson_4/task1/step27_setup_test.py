@@ -29,8 +29,6 @@ driver = webdriver.Chrome(
     options=options
 )
 
-driver.implicitly_wait(10)
-
 driver.get("https://www.lambdatest.com/selenium-playground/")
 
 print("Page Title:", driver.title)
